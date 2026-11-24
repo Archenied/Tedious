@@ -16,10 +16,12 @@
   h1 { font-size:68px; line-height:1; margin:0; letter-spacing:-1px; font-weight:900; }
   .tag { margin:10px 0 0; font-size:20px; color:var(--grey); }
   .ver { display:inline-block; margin-top:16px; padding:3px 14px; border:2.5px solid var(--ink); border-radius:999px; font-weight:700; font-size:14px; letter-spacing:.5px; }
-  .cards { display:grid; grid-template-columns:1fr 1fr; gap:26px; margin:46px 0 14px; }
+  .cards { display:grid; grid-template-columns:1fr 1fr; gap:30px; margin:46px 0 18px; }
   .card { border:3px solid var(--ink); border-radius:14px 22px 16px 24px; padding:26px 24px 24px; background:#fff; box-shadow:7px 7px 0 var(--ink); display:flex; flex-direction:column; }
   .card h2 { margin:0 0 4px; font-size:26px; }
   .card p { margin:0 0 20px; color:var(--grey); flex:1; }
+  .size { display:inline-block; margin:2px 0 12px; font-weight:700; font-size:13px; letter-spacing:.4px; border:2px solid var(--ink); border-radius:999px; padding:1px 10px; align-self:flex-start; }
+  .card a:not(.btn) { color:var(--ink); }
   .btn { display:block; text-align:center; text-decoration:none; background:var(--ink); color:#fff; font-weight:800; font-size:18px; padding:14px 10px; border-radius:10px; border:3px solid var(--ink); transition:transform .08s; }
   .btn:hover { transform:translate(-2px,-2px); background:#fff; color:var(--ink); }
   .btn.alt { background:#fff; color:var(--ink); }
@@ -47,13 +49,27 @@
   <div class="cards">
     <div class="card">
       <h2>Installer</h2>
-      <p>The easy way. Installs Tedious for you only (no admin needed), adds a Start-menu and desktop shortcut, and an uninstaller in Apps &amp; features.</p>
-      <a class="btn" id="dl-setup" href="https://github.com/Archenied/Tedious/releases/latest/download/Tedious-Setup.exe">Download Tedious-Setup.exe</a>
+      <span class="size">about 60 KB, then 67 MB once</span>
+      <p>The easy way. A tiny download that fetches Tedious and installs it for you only (no admin needed), with Start-menu and desktop shortcuts and an uninstaller in Apps &amp; features.</p>
+      <a class="btn" href="https://github.com/Archenied/Tedious/releases/latest/download/Tedious-Setup.exe">Download Tedious-Setup.exe</a>
     </div>
     <div class="card">
       <h2>Portable</h2>
-      <p>One file, nothing to install. Put <b>Tedious.exe</b> anywhere (even a USB stick) and double-click it. It updates itself too.</p>
-      <a class="btn alt" id="dl-portable" href="https://github.com/Archenied/Tedious/releases/latest/download/Tedious.exe">Download Tedious.exe</a>
+      <span class="size">67 MB</span>
+      <p>The whole app in one file. Nothing to install: put <b>Tedious.exe</b> anywhere (even a USB stick) and double-click it. It updates itself too.</p>
+      <a class="btn alt" href="https://github.com/Archenied/Tedious/releases/latest/download/Tedious.exe">Download Tedious.exe</a>
+    </div>
+    <div class="card">
+      <h2>Updater</h2>
+      <span class="size">about 50 KB</span>
+      <p>A repair tool. If Tedious did not update itself or stopped working, run this: it downloads the newest Tedious (checked with a SHA-256) and puts it in place. It also installs Tedious if you have nothing yet.</p>
+      <a class="btn alt" href="https://github.com/Archenied/Tedious/releases/latest/download/Tedious-Updater.exe">Download Tedious-Updater.exe</a>
+    </div>
+    <div class="card">
+      <h2>.NET version</h2>
+      <span class="size">about 1.4 MB</span>
+      <p>The small version. It needs the free <a href="https://dotnet.microsoft.com/download/dotnet/10.0">.NET 10 Desktop Runtime</a> (x64) from Microsoft installed once. Less storage, tiny updates.</p>
+      <a class="btn alt" href="https://github.com/Archenied/Tedious/releases/latest/download/Tedious-NET.exe">Download Tedious-NET.exe</a>
     </div>
   </div>
   <p class="small">Windows 10 / 11, 64-bit. Windows may show a SmartScreen note because Tedious is a new, unsigned app: choose "More info" then "Run anyway".</p>
