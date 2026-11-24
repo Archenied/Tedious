@@ -1,0 +1,9 @@
+*.exe
+*.sha256
+out/
+build/
+english-log/
+*.jsonl
+*.key
+*.token
+.env
